@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './log.png';
 import './App.css';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import Login from './Pages/Login';
