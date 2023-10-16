@@ -7,7 +7,7 @@ function Footer() {
         <div className='row mx-auto d-flex  pt-5'>
             <div className='col-lg-6 col-md-12 flex-column'>
                 <div className='col-12 footer-div1'>
-                    <h3 className='main-heading d-flex  align-items-center'>ROJGAR <img className='vector ml-2' src={require('../assets/logo.png')} /></h3>
+                    <h3 className='main-heading d-flex  align-items-center'>ROJGAR <img className='vector ml-2' src={require('../assets/log.png')} /></h3>
                     <div className='footer-text'>
                     Rojgar is one of the best job portal that helps in empowering your career journey with seamless connections and limitless opportunities
                     </div>
