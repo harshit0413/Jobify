@@ -10,7 +10,7 @@ function Footer2() {
             <button className='mr-3 footerbtn'>Login</button>
             <button className='footerbtn'>Sign Up</button>
         </div>
-        <p className='main-heading d-flex  align-items-center mb-2 mt-4'>JOBIFY <img className='vector ml-2' src={require('../assets/Vector.png')} /></p>
+        <p className='main-heading d-flex  align-items-center mb-2 mt-4'>ROJGAR <img className='vector ml-2' src={require('../assets/logo.png')} /></p>
     </div>
   )
 }
