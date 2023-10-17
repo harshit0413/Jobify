@@ -5,7 +5,7 @@ import { get_applications, get_data, get_jobs, latest_jobs } from '../Utils/serv
 import './Css/Dashboard.css'
 import Recommended from '../Components/Recommended'
 import { useNavigate } from 'react-router-dom'
-import jwt_decode from "jwt-decode";
+import jwt_decode from "jwt-decode"; 
 import { loginContext } from '../App'
 import Application from '../Components/Application'
 
