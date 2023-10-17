@@ -48,11 +48,10 @@ function Dashboard() {
   return (
     <div>
         <Header/>
-        {/* <div className='row p-3 p-lg-5 ml-lg-5'>
+        <div className='row p-3 p-lg-5 ml-lg-5'>
             <div className='col-lg-8 d-flex flex-column align-items-start'>
                 <p className='mb-0'>Welcome Back !!</p>
                 <p className='accountName'>{user?user.name:''}</p>
-{/* sjds */}
 
                 <div className='d-flex mx-2 mx-lg-0 mb-4 mb-lg-1' style={{width: '100%'}}>
                     <input type='text' className='searchBox' placeholder='Search' />
@@ -109,7 +108,7 @@ function Dashboard() {
         </div>
         </div>
         :<></>
-        :<></>} */}
+        :<></>}
 
         <Footer/>
     </div>
