@@ -17,34 +17,34 @@ function Dashboard() {
     const [show, setShow] = useState(false)
     const [data, setData] = useState()
     const [jobsPosted, setJobsPosted] = useState()
-  useEffect(()=>{
-    if(get_data()){
-        setUser(jwt_decode(get_data()))
-        latest_jobs().then((results)=>{
-          setJobs(results.data)
-        }).catch((err)=>{
-          console.log(err.message)
-        })
-        if(jwt_decode(get_data()).company){
-          get_jobs().then().then((results)=>{
-            console.log(results.data)
-            if(results.status===200){
-              setJobsPosted(results.data)
-            }
-          })
-        }else{
-          get_applications().then((results)=>{
-            if(results.status===200){
-              setApplications(results.data)
-            }
-          }).catch((err)=>{
+  // useEffect(()=>{
+  //   if(get_data()){
+  //       setUser(jwt_decode(get_data()))
+  //       latest_jobs().then((results)=>{
+  //         setJobs(results.data)
+  //       }).catch((err)=>{
+  //         console.log(err.message)
+  //       })
+  //       if(jwt_decode(get_data()).company){
+  //         get_jobs().then().then((results)=>{
+  //           console.log(results.data)
+  //           if(results.status===200){
+  //             setJobsPosted(results.data)
+  //           }
+  //         })
+  //       }else{
+  //         get_applications().then((results)=>{
+  //           if(results.status===200){
+  //             setApplications(results.data)
+  //           }
+  //         }).catch((err)=>{
   
-          })
-        }
-    }else{
-        navigate('/')
-    }
-  },[])
+  //         })
+  //       }
+  //   }else{
+  //       navigate('/')
+  //   }
+  // },[])
   return (
     <div>
         <Header/>
