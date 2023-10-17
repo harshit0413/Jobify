@@ -5,7 +5,7 @@ import { get_applications, get_data, get_jobs, latest_jobs } from '../Utils/serv
 import './Css/Dashboard.css'
 import Recommended from '../Components/Recommended'
 import { useNavigate } from 'react-router-dom'
-import jwt_decode from "jwt-decode"; 
+import jwt_decode from "jwt-decode";
 import { loginContext } from '../App'
 import Application from '../Components/Application'
 
@@ -52,6 +52,7 @@ function Dashboard() {
             <div className='col-lg-8 d-flex flex-column align-items-start'>
                 <p className='mb-0'>Welcome Back !!</p>
                 <p className='accountName'>{user?user.name:''}</p>
+{/* sjds */}
 
                 <div className='d-flex mx-2 mx-lg-0 mb-4 mb-lg-1' style={{width: '100%'}}>
                     <input type='text' className='searchBox' placeholder='Search' />
