@@ -48,7 +48,7 @@ function Dashboard() {
   return (
     <div>
         <Header/>
-        <div className='row p-3 p-lg-5 ml-lg-5'>
+        {/* <div className='row p-3 p-lg-5 ml-lg-5'>
             <div className='col-lg-8 d-flex flex-column align-items-start'>
                 <p className='mb-0'>Welcome Back !!</p>
                 <p className='accountName'>{user?user.name:''}</p>
@@ -108,7 +108,7 @@ function Dashboard() {
         </div>
         </div>
         :<></>
-        :<></>}
+        :<></>} */}
 
         <Footer/>
     </div>
