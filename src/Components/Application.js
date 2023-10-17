@@ -1,43 +1,45 @@
-import React, { useState } from 'react'
-import './Css/Application.css'
-import { apply_job } from '../Utils/services'
+import React, { useState } from 'react';
+import './Css/Application.css';
+import { apply_job } from '../Utils/services';
 
 function Application(props) {
-    const [name, setName] = useState()
-    const [qualification, setQualification] = useState('BE/BTech')
-    const [yoe, setYoe] = useState()
-    const apply = ()=>{
-        if(name && qualification && yoe){
-            apply_job(props.data.title, props.data.description, name, qualification, yoe).then((results)=>{
-                if(results.status===200){
-                    props.setShow(false)
-                }
-            }).catch((err)=>{
-                console.log(err.message)
-            })
+    const [name, setName] = useState('');
+    const [qualification, setQualification] = useState('BE/BTech');
+    const [yoe, setYoe] = useState('');
+
+    const apply = () => {
+        if (name && qualification && yoe) {
+            apply_job(props.data.title, props.data.description, name, qualification, yoe)
+                .then((results) => {
+                    if (results.status === 200) {
+                        props.setShow(false);
+                    }
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
         }
-    }
-  return (
-    <div className='application px-5 py-3'>
-        <img className='closebtn' onClick={()=>props.setShow(false)} src={require('../assets/close.png')} />
-        <p className=' bold'>{props.data.company}</p>
-        <div className='d-flex align-items-center justify-content-between'>
-            <div>
-                <h4>
-                    {props.data.title}
-                </h4>
+    };
+
+    return (
+        <div className='application px-5 py-3'>
+            <img className='closebtn' onClick={() => props.setShow(false)} src={require('../assets/close.png')} alt='Close' />
+            <p className='bold'>{props.data.company}</p>
+            {/* ... rest of your component code */}
+            <div className='d-flex align-items-center justify-content-between'>
+                <div>
+                    <h4>{props.data.title}</h4>
+                </div>
+                <div>
+                    <img src={require('../assets/google.png')} alt='Company Logo' />
+                </div>
             </div>
-            <div>
-                <img src={require('../assets/google.png')}/>
-            </div>
-        </div>
-        
         <div className='d-flex bottomDiv1 mx-auto mt-3 py-2'>
             <div>
                 <span className='bold'> {props.data.salary}/Month </span><br/>
                 {props.data.location}
             </div>
-            <div className=''> 
+            <div className=''>
                 <button className='btn btnA mr-2'>Full-time</button>
                 <button className='btn btnA'>On-site</button>
             </div>

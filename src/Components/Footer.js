@@ -1,21 +1,23 @@
 import React from 'react'
 import './Css/Footer.css'
+import logo from '../assets/log.png';
 
 function Footer() {
   return (
     <div className='footer mx-auto pb-2 mb-2'>
         <div className='row mx-auto d-flex  pt-5'>
             <div className='col-lg-6 col-md-12 flex-column'>
-                <div className='col-12 footer-div1'>
-                    <h3 className='main-heading d-flex  align-items-center'>ROJGAR <img className='vector ml-2' src={require('../assets/log.png')} /></h3>
-                    <div className='footer-text'>
-                    Rojgar is one of the best job portal that helps in empowering your career journey with seamless connections and limitless opportunities
-                    </div>
+            <div className='col-12 footer-div1' style={{ textAlign: 'justify' }}>
+            <h3 className='main-heading d-flex align-items-center'>ROJGAR <img className='vector ml-2' src={logo} alt={logo} style={{ width: '100px', height: '100px' }} /></h3>
+            <div className='footer-text'>
+                Rojgar is one of the best job portals that helps in empowering your career journey with seamless connections and limitless opportunities.
+            </div>
                     <div className='mt-3'>
-                        <img className='vectorImg mr-2' src={require('../assets/instagram.png')} />
-                        <img className='vectorImg mr-2' src={require('../assets/fb.png')} />
-                        <img className='vectorImg' src={require('../assets/twitter.png')} />
-                    </div>
+    <img className='vectorImg mr-2' src={require('../assets/instagram.png')} alt='Instagram' />
+    <img className='vectorImg mr-2' src={require('../assets/fb.png')} alt='Facebook' />
+    <img className='vectorImg' src={require('../assets/twitter.png')} alt='Twitter' />
+</div>
+
                 </div>
             </div>
             <div className='col-lg-6 col-md-12 d-flex justify-content-center'>
